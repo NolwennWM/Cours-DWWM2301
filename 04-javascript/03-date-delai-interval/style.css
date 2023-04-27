@@ -39,3 +39,92 @@ footer
     position: absolute;
     transition: width .3s;
 }
+/* Exercice : */
+.container
+{
+    height: 79vh;
+    width: 89%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.horloge
+{
+    width: 350px;
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url(./exercice/cadran.jpg);
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+}
+.cadre
+{
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background-color: black;
+    border-radius: 50%;
+}
+.heure, .minute, .seconde
+{
+    position: absolute;
+}
+.heure, .hr
+{
+    height: 190px;
+    width: 190px;
+}
+.minute, .min
+{
+    width: 190px; 
+    height: 190px;
+}
+.seconde, .sec
+{
+    width: 200px; 
+    height: 200px;
+}
+.hr, .min, .sec
+{
+    transform-origin: bottom center;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    border-radius: 50%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    background-color: black;
+    border-radius: 6px 6px 0 0;
+    height: 100px;
+    width: 4px;
+}
+.hr
+{
+    width: 10px;
+    top: -100px;
+}
+.min
+{
+    top: -95px;
+}
+.sec
+{
+    height: 150px;
+    top: -150px;
+}
+.sec::before
+{
+    content: "";
+    width: 0px; 
+    height: 0px;
+    border-bottom: 20px solid black;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+}
