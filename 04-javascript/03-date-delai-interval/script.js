@@ -6,7 +6,7 @@ const progress = document.querySelector('.progress');
 
 /* 
     On crée un nouvel objet "Date" qui contiendra l'heure et la date du moment de sa création.
-    Les "classes" permettant de créer un nouvel objet son conventionnellement écrites avec une majuscule.
+    Les "classes" permettant de créer un nouvel objet sont conventionnellement écrites avec une majuscule.
     Le mot clef "new" les précédents nous permet d'indiquer que l'on va créer un nouvel objet à partir de celle ci.
 */
 const date = new Date();
@@ -20,8 +20,7 @@ mainTime.textContent = date.toLocaleTimeString();
 /**
  * Créer un nouvel objet date et affiche l'heure dans la balise time
  */
-function timer()
-{
+function timer() {
     const t = new Date();
     mainTime.textContent = t.toLocaleTimeString();
 }
@@ -38,7 +37,7 @@ console.log(intervalId);
     On peut utiliser clearInterval pour stopper un interval.
     Il nous faudra donner en paramètre l'id de l'interval à stopper.
 */
-mainBtn.addEventListener("click", ()=>clearInterval(intervalId));
+mainBtn.addEventListener("click", () => clearInterval(intervalId));
 
 /* 
     setTimeout fonctionne de la même façon que setInterval
@@ -47,17 +46,17 @@ mainBtn.addEventListener("click", ()=>clearInterval(intervalId));
 
     là aussi on peut empêcher son execution avec un "clearTimeout"
 */
-let timeoutId = setTimeout(()=>alert("Coucou en retard !"), 3000);
+let timeoutId = setTimeout(() => alert("Coucou en retard !"), 3000);
 
 clearTimeout(timeoutId);
 
 let w = 0;
-function load()
-{
+
+function load() {
     console.log(w);
-    if(w === 100) return;
+    if (w === 100) return;
     w++
-    progress.style.width = w+"%";
+    progress.style.width = w + "%";
     setTimeout(load, 100);
     // load();
 }
