@@ -1,0 +1,35 @@
+main.pageMain
+{
+    display: grid;
+    grid-template-columns: auto 1fr;
+}
+.sideNavigation menu.navigation
+{
+    flex-direction: column;
+    justify-content: flex-start;
+}
+.sideNavigation menu li
+{
+    list-style: var(--menu-icon);
+}
+footer.pageFooter
+{
+    grid-template-rows: repeat(3, auto);
+    grid-template-columns: auto 1fr;
+}
+.pageFooter hr
+{
+    grid-column: 1/3;
+}
+.pageFooter .bottom
+{
+    grid-column: 1/3;
+}
+.pageFooter .left ol
+{
+    flex-direction: column;
+}
+.pageFooter .right fieldset
+{
+    justify-content: space-between;
+}

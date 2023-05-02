@@ -1,3 +1,4 @@
+/* Footer des pages */
 footer.pageFooter,
 .pageFooter :where(.left, .right, .bottom, fieldset)
 {
@@ -6,11 +7,14 @@ footer.pageFooter,
 footer.pageFooter
 {
     background-color: chartreuse;
+    display: grid;
+    grid-template-rows: repeat(4, auto);
 }
-.pageFooter .left
+.pageFooter .left ol
 {
-    float: left;
-    width: 20%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
 .pageFooter .left ul
 {
@@ -22,26 +26,17 @@ footer.pageFooter
 }
 .pageFooter .right fieldset
 {
-    position: relative;
-}
-.pageFooter .right .formGroup:nth-of-type(1)
-{
-    float: left;
-}
-.pageFooter .right .formGroup:nth-of-type(2)
-{
-    width: fit-content;
-    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
 }
 .pageFooter .right button[type="submit"]
 {
-    position: absolute;
-    right: var(--default-pading);
-    bottom: var(--default-pading);
     padding: var(--default-pading);
     text-transform:uppercase;
     font-weight: bold;
     font-size: 1em;
+    cursor: pointer;
 }
 .pageFooter .right label
 {

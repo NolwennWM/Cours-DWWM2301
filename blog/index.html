@@ -1,41 +1,61 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog-Maquette</title>
-    <link rel="stylesheet" href="stagiaire.css">
+    <!-- Meta description -->
+    <meta name="author" content="Nolwenn WEBER-MARQUISET">
+    <meta name="description" content="blog servant de fil rouge à la formation DWWM">
+    <meta name="keywords" content="blog, article, dwwm,fil rouge">
+    <!-- Titre et icon -->
+    <title>Mon super Blog</title>
+    <link rel="shortcut icon" href="./AFCI-LOGO.svg" type="image/svg+xml">
+    <!-- CSS et JS (ajout version css) -->
+    <!-- <link rel="stylesheet" href="./01-properties/style.css"> -->
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./script.js" defer></script>
+    <!-- fin ajout -->
 </head>
 <body>
+    <!-- En-tête du site -->
     <header class="pageHeader" id="home">
         <div class="logo">
             <a href="./">
-                <img src="./AFCI-LOGO.svg" alt="Logo de l'AFCI" decoding="async" loading="lazy">
+                <img src="./AFCI-LOGO.svg" alt="Logo AFCI" loading="lazy" decoding="async" height="150">
             </a>
         </div>
-        <h1 class="title">Mon Super Blog</h1>
-        <form action="https://www.google.fr/search" method="get" target="_blank" class="search">
-            <input type="search" placeholder="Votre Recherche" name="q">
+        <h1 class="title">
+            Mon Super Blog
+        </h1>
+        <form action="https://www.google.fr/search" class="search" method="get" target="_blank">
+            <input type="text" name="q" placeholder="votre recherche">
+            <!-- &#x1F50D; est le code hexadecimal pour la caractère 🔍 -->
             <input type="submit" value="&#x1F50D;">
         </form>
         <hr>
     </header>
+    <!-- Contenu du site -->
     <main class="pageMain">
+        <!-- Navigation du site -->
         <nav class="sideNavigation">
+            <!-- Ajout version responsive -->
+            <!-- &#9776; est le code html pour ☰ -->
             <label for="burger">&#9776;</label>
             <input type="checkbox" id="burger">
+            <!-- fin ajout -->
             <menu class="navigation">
-                <li><a href="./#home">accueil</a></li>
-                <li><a href="#articles">article</a></li>
-                <li><a href="#contact">contact</a></li>
+                <li><a href="./#home">Accueil</a></li>
+                <li><a href="#articles">Articles</a></li>
+                <li><a href="#contact">Contact</a></li>
             </menu>
         </nav>
+        <!-- Articles du site -->
         <section id="articles">
-            <h2>Articles du blog :</h2>
+            <h2>Articles du Blog:</h2>
             <article>
                 <header class="articleHeader">
-                    <h3>Mes fruits et légumes préférés</h3>
+                    <h3>Mes Fruits et Légumes préférés</h3>
                 </header>
                 <div class="articleMain">
                     <p>
@@ -73,7 +93,7 @@
                                     <td>11,10€</td>
                                 </tr>
                                 <tr>
-                                    <td rowspan="2"> Légumes</td>
+                                    <td rowspan="2">Légume</td>
                                     <td>Piment</td>
                                     <td>18,75€</td>
                                 </tr>
@@ -85,7 +105,7 @@
                             </tbody>
                             <tfoot>
                                 <tr>
-                                    <td colspan="4">Et la liste pourrait être bien plus grande</td>
+                                    <td colspan="4">Et la liste pourrait être bien plus grande.</td>
                                 </tr>
                             </tfoot>
                         </table>
@@ -97,95 +117,93 @@
             </article>
             <article>
                 <header class="articleHeader">
+                    <!-- emmet : Lorem5 -->
                     <h3>Lorem ipsum dolor sit amet.</h3>
                 </header>
                 <div class="articleMain">
                     <aside>
                         <p>
-                            <strong>Lorem ipsum, dolor sit </strong>amet consectetur adipisicing elit. <b>Quae, quasi.</b>
+                            <!-- emmet : lorem10 -->
+                            <strong>Lorem ipsum dolor sit,</strong> amet consectetur adipisicing elit. <b>Optio, quaerat?</b>
                         </p>
                     </aside>
+                    <!-- emmet : lorem -->
                     <p>
-                        <u>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</u> Impedit voluptate possimus obcaecati porro error ab culpa, vero quam odio eligendi cupiditate dicta ea quis corrupti. Voluptatum mollitia dignissimos doloremque totam.
+                        <u>Lorem ipsum dolor sit amet consectetur adipisicing elit.</u> Vitae tenetur nam libero ex ad culpa animi doloribus, voluptas laudantium doloremque vero provident quo. Culpa, dolor at! Sapiente totam omnis harum.
                     </p>
+                    <!-- emmet : lorem*2 -->
                     <p>
-                        <em>Lorem ipsum dolor sit amet consectetur adipisicing elit.</em> Perferendis quo debitis aliquid accusantium maxime suscipit! Facilis culpa, explicabo nulla, omnis temporibus possimus commodi voluptates ratione soluta iure voluptatem, ducimus facere!
+                        <em>Lorem ipsum dolor sit amet consectetur adipisicing elit. </em>Enim dolorum laborum omnis totam eligendi saepe. Cum, dolores aperiam. Necessitatibus saepe odit magni, excepturi expedita possimus voluptatibus sit voluptatum cumque a.
+                        Quaerat eum ducimus ab perspiciatis sunt dignissimos natus magni adipisci error atque, delectus nisi facilis magnam repellendus quod dicta quam, accusantium vitae iusto. <i>Quisquam recusandae facilis sapiente ratione dolorum? Quaerat?</i>
                     </p>
                 </div>
                 <footer class="articleFooter">
                     <span class="label">Publié le :</span> <time>12/03/2023</time>
                 </footer>
-
             </article>
             <article>
                 <header class="articleHeader">
-                    <h3>Photo de Vacances</h3>
+                    <h3>Photos de Vacances</h3>
                 </header>
                 <div class="articleMain">
                     <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut quis nemo tenetur voluptatem libero nesciunt, delectus odio non recusandae, dolore, aspernatur optio cumque officia saepe. Aliquid voluptatum dolore maxime laborum.
-                        <img src="../ressources/images/paysage/phare.jpg" alt="photo de phare" width="400" decoding="async" loading="lazy">
-                        Pariatur explicabo, deleniti quasi cum dolorum assumenda asperiores at saepe alias numquam natus esse veniam ullam quidem, nulla ab corrupti facere inventore.
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt debitis eaque, eveniet commodi possimus quae? Dolorum, obcaecati recusandae maiores blanditiis doloremque sunt, atque, consequatur fugit tempora quasi doloribus maxime eum!
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cupiditate tempora iure obcaecati! Eaque reprehenderit obcaecati harum iste enim nesciunt non eius necessitatibus voluptatibus, sit veniam quod. Sit iusto sunt hic!
+                        <img src="/ressources/images/paysage/phare.jpg" alt="Photo d'un phare" decoding="async" loading="lazy" height="200">
+                        Aperiam corrupti dolorum cupiditate excepturi illum voluptatum ad nisi vel recusandae dicta eum amet reprehenderit cum, necessitatibus quos quam fugit minima sed eos voluptatibus? Obcaecati officiis dolore modi consequuntur porro!
+                        Reprehenderit, nam. Reprehenderit nulla similique animi veritatis dicta. Ad iusto voluptatem eum distinctio minima magnam nesciunt expedita quam voluptatum quae eaque repellendus excepturi porro magni, dolore, totam enim fugit neque!
                     </p>
                     <figure>
-                        <img src="../ressources/images/paysage/ville.jpg" alt="Une photo de ville" width="200" decoding="async" loading="lazy">
+                        <img src="/ressources/images/paysage/ville.jpg" alt="Photo d'une ville" loading="lazy" decoding="async" height="200">
                         <figcaption>Une ville lors d'un couché de soleil</figcaption>
                     </figure>
                 </div>
                 <footer class="articleFooter">
-                    <p>
-                        <span class="label">publié le :</span> <time>11/03/2023</time>
-                    </p>
+                    <span class="label">Publié le :</span> <time>11/03/2023</time>
                 </footer>
             </article>
         </section>
     </main>
-    <footer id="contact" class="pageFooter">
+    <!-- Pied de page du site -->
+    <footer class="pageFooter">
         <hr>
-        <nav class="left">
+        <div class="left">
             <ol class="externalMenu">
                 <li>
                     <a href="https://developer.mozilla.org/fr/docs/Web/HTML" target="_blank">HTML</a>
                     <ul>
-                        <li>
-                            <a href="https://unicode.org/emoji/charts/full-emoji-list.html" target="_blank">Unicode</a>
-                        </li>
-                        <li>
-                            <a href="https://validator.w3.org/" target="_blank">Validator</a>
-                        </li>
-                        <li>
-                            <a href="https://caninclude.glitch.me/" target="_blank">Can I Include</a>
-                        </li>
+                        <li><a href="https://unicode.org/emoji/charts/full-emoji-list.html" target="_blank">Unicode</a></li>
+                        <li><a href="https://validator.w3.org/" target="_blank">Validator</a></li>
+                        <li><a href="https://caninclude.glitch.me/" target="_blank">Can I Include</a></li>
                     </ul>
                 </li>
                 <li>
                     <a href="https://developer.mozilla.org/fr/docs/Web/CSS" target="_blank">CSS</a>
                     <ul>
+                        <li><a href="https://jigsaw.w3.org/css-validator/" target="_blank">Validator CSS</a></li>
                         <li><a href="https://caniuse.com/" target="_blank">Can I Use</a></li>
+                        <li><a href="https://animista.net/" target="_blank">Animista</a></li>
                     </ul>
                 </li>
             </ol>
-        </nav>
-        <div class="right">
+        </div>
+        <div class="right" id="contact">
             <form action="#" method="post">
                 <fieldset>
-                    <legend>Formulaire de Contact :</legend>
+                    <legend>Formulaire de Contact:</legend>
                     <div class="formGroup">
-                        <label for="email">Votre Email :</label>
-                        <input type="email" name="email" id="email" required>
+                        <label for="email">Votre Email:</label>
+                        <input type="email" name="email" id="email">
                     </div>
                     <div class="formGroup">
-                        <label for="commentaire">Votre Message :</label>
-                        <textarea name="commentaire" id="commentaire" cols="20" rows="5" required></textarea>
+                        <label for="content">Votre Message :</label>
+                        <textarea name="content" id="content" cols="30" rows="5"></textarea>
                     </div>
                     <button type="submit">Envoyer</button>
                 </fieldset>
             </form>
         </div>
-        
         <div class="bottom">
+            <!-- &copy; est le code pour le caractère © -->
             <a href="http://www.marquiset.fr" target="_blank">&copy; 2023-2023 | WEBER-MARQUISET Nolwenn</a>
         </div>
     </footer>

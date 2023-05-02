@@ -1,27 +1,28 @@
+/* Header des pages */
 header.pageHeader
 {
     background-color: aquamarine;
-    position: relative;
     padding: var(--default-pading);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
 }
-.pageHeader :where(.logo, h1.title).logo
+.pageHeader .logo img
 {
-    display: inline-block;
+    width: 100px;
 }
-.pageHeader h1.title
+.pageHeader .title
 {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    translate: -50% -50%;
+    animation: grow 2s linear 1;
 }
 .pageHeader form.search
 {
-    position: absolute;
-    right: 10px;
-    bottom: 20px;
+    flex-grow: 1;
+    display: flex;
+    justify-content: end;
 }
-.pageHeader form input[type="search"]
+.pageHeader form input[type="text"]
 {
     height: 2rem;
     border-radius: 10px;
@@ -32,16 +33,10 @@ header.pageHeader
     height: 2rem;
     aspect-ratio: 1/1;
     font-size: 1rem;
-}
-.pageHeader h1
-{
-    animation-name: appearTitle;
-    animation-duration: 3s;
-    animation-direction: normal;
-    animation-iteration-count: infinite;
+    cursor: pointer;
+    transition: rotate .3s;
 }
 .pageHeader form input[type="submit"]:hover
 {
-    animation-name: rotate;
-    animation-duration: 1s;
+    rotate: 360deg;
 }

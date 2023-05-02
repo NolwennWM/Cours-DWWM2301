@@ -24,6 +24,41 @@ footer.pageFooter
 {
     line-height: 1.3em;
 }
+.pageFooter .right
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* Mise en forme du boutton */
+.pageFooter .contactBtn
+{
+    font-size: 2em;
+    padding: 5px;
+}
+/* Ajout de la mise en forme de la div ajouté */
+.pageFooter .modalContact
+{
+    display: none;
+    scale: 0;
+    transition: scale .3s linear;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    justify-content: center;
+    align-items: center;
+    z-index: 15;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.pageFooter .right form
+{
+    background-color: chartreuse;
+    padding: 15px;
+    border-radius: 5px;
+}
+/* Fin ajout js */
 .pageFooter .right fieldset
 {
     display: flex;

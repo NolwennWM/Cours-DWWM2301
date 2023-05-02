@@ -1,65 +1,31 @@
-body
+.pageHeader form.search
 {
-    display: flex;
-    flex-direction: column;
-}
-.logo img
-{
-    width: 100px;
-    height: 140px;
-}
-.pageMain
-{
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto 1fr;
+    flex-grow: 0;
+    align-self: flex-end;
 }
 nav.sideNavigation
 {
-    height: auto;
-    width: 100%;
+    position: sticky;
+    top: 0;
 }
-section#articles
+.sideNavigation label[for="burger"]
+{
+    display: none;
+}
+.sideNavigation menu.navigation
 {
     width: 100%;
-}
-.sideNavigation menu
-{
-    position: unset;
+    scale: 1;
+    height: auto !important;
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-evenly;
+    overflow: initial;
 }
 .sideNavigation menu li
 {
-    display: inline-block;
+    list-style: none;
 }
-.pageFooter
+.pageFooter .right fieldset
 {
-    display: flex;
-    flex-direction: column;
-}
-.pageFooter .left
-{
-    width: 100%;
-}
-.externalMenu
-{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-}
-.right form fieldset
-{
-    display: flex;
     justify-content: space-evenly;
-}
-.pageFooter .right button[type="submit"]
-{
-    position: static;
-}
-.pageFooter .right .formGroup:nth-of-type(2)
-{
-    margin: 0;
 }

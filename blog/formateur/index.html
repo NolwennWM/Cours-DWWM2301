@@ -10,18 +10,19 @@
     <meta name="keywords" content="blog, article, dwwm,fil rouge">
     <!-- Titre et icon -->
     <title>Mon super Blog</title>
-    <link rel="shortcut icon" href="./AFCI-LOGO.svg" type="image/svg+xml">
-    <!-- CSS et JS (ajout version css) -->
-    <!-- <link rel="stylesheet" href="./01-properties/style.css"> -->
-    <link rel="stylesheet" href="./css-formateur/style.css">
-    <!-- fin ajout -->
+    <link rel="shortcut icon" href="/ressources/images/icon/AFCI-LOGO.svg" type="image/svg+xml">
+    <!-- CSS et Script -->
+    <link rel="stylesheet" href="./style/style.css">
+
+    <script src="./delete.js" defer></script>
+    <script src="./contact.js" defer></script>
 </head>
 <body>
     <!-- En-tête du site -->
     <header class="pageHeader" id="home">
         <div class="logo">
             <a href="./">
-                <img src="./AFCI-LOGO.svg" alt="Logo AFCI" loading="lazy" decoding="async" height="150">
+                <img src="/ressources/images/icon/AFCI-LOGO.svg" alt="Logo AFCI" loading="lazy" decoding="async" height="150">
             </a>
         </div>
         <h1 class="title">
@@ -56,6 +57,9 @@
                 <header class="articleHeader">
                     <h3>Mes Fruits et Légumes préférés</h3>
                 </header>
+                <nav class="articleNav">
+                    <button class="delete">Supprimer</button>
+                </nav>
                 <div class="articleMain">
                     <p>
                         Voici quelques un de mes fruits et légumes préférés :
@@ -119,18 +123,18 @@
                     <!-- emmet : Lorem5 -->
                     <h3>Lorem ipsum dolor sit amet.</h3>
                 </header>
+                <nav class="articleNav">
+                    <button class="delete">Supprimer</button>
+                </nav>
                 <div class="articleMain">
                     <aside>
                         <p>
-                            <!-- emmet : lorem10 -->
                             <strong>Lorem ipsum dolor sit,</strong> amet consectetur adipisicing elit. <b>Optio, quaerat?</b>
                         </p>
                     </aside>
-                    <!-- emmet : lorem -->
                     <p>
                         <u>Lorem ipsum dolor sit amet consectetur adipisicing elit.</u> Vitae tenetur nam libero ex ad culpa animi doloribus, voluptas laudantium doloremque vero provident quo. Culpa, dolor at! Sapiente totam omnis harum.
                     </p>
-                    <!-- emmet : lorem*2 -->
                     <p>
                         <em>Lorem ipsum dolor sit amet consectetur adipisicing elit. </em>Enim dolorum laborum omnis totam eligendi saepe. Cum, dolores aperiam. Necessitatibus saepe odit magni, excepturi expedita possimus voluptatibus sit voluptatum cumque a.
                         Quaerat eum ducimus ab perspiciatis sunt dignissimos natus magni adipisci error atque, delectus nisi facilis magnam repellendus quod dicta quam, accusantium vitae iusto. <i>Quisquam recusandae facilis sapiente ratione dolorum? Quaerat?</i>
@@ -144,6 +148,9 @@
                 <header class="articleHeader">
                     <h3>Photos de Vacances</h3>
                 </header>
+                <nav class="articleNav">
+                    <button class="delete">Supprimer</button>
+                </nav>
                 <div class="articleMain">
                     <p>
                         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cupiditate tempora iure obcaecati! Eaque reprehenderit obcaecati harum iste enim nesciunt non eius necessitatibus voluptatibus, sit veniam quod. Sit iusto sunt hic!
@@ -178,28 +185,38 @@
                 <li>
                     <a href="https://developer.mozilla.org/fr/docs/Web/CSS" target="_blank">CSS</a>
                     <ul>
+                        <li><a href="https://animista.net/" target="_blank">Animista</a></li>
                         <li><a href="https://jigsaw.w3.org/css-validator/" target="_blank">Validator CSS</a></li>
                         <li><a href="https://caniuse.com/" target="_blank">Can I Use</a></li>
-                        <li><a href="https://animista.net/" target="_blank">Animista</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="https://developer.mozilla.org/fr/docs/Web/JavaScript" target="_blank">Javascript</a>
+                    <ul>
+                        <li><a href="https://thisthat.dev/" target="_blank">This That</a></li>
                     </ul>
                 </li>
             </ol>
         </div>
         <div class="right" id="contact">
-            <form action="#" method="post">
-                <fieldset>
-                    <legend>Formulaire de Contact:</legend>
-                    <div class="formGroup">
-                        <label for="email">Votre Email:</label>
-                        <input type="email" name="email" id="email">
-                    </div>
-                    <div class="formGroup">
-                        <label for="content">Votre Message :</label>
-                        <textarea name="content" id="content" cols="30" rows="5"></textarea>
-                    </div>
-                    <button type="submit">Envoyer</button>
-                </fieldset>
-            </form>
+            <!-- Ajout d'un bouton et d'une div qui encercle le formulaire -->
+            <button class="contactBtn">Nous Contacter</button>
+            <div class="modalContact">
+                <form action="#" method="post">
+                    <fieldset>
+                        <legend>Formulaire de Contact:</legend>
+                        <div class="formGroup">
+                            <label for="email">Votre Email:</label>
+                            <input type="email" name="email" id="email">
+                        </div>
+                        <div class="formGroup">
+                            <label for="content">Votre Message :</label>
+                            <textarea name="content" id="content" cols="30" rows="5"></textarea>
+                        </div>
+                        <button type="submit">Envoyer</button>
+                    </fieldset>
+                </form>
+            </div>
         </div>
         <div class="bottom">
             <!-- &copy; est le code pour le caractère © -->
