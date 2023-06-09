@@ -2,24 +2,25 @@
 
 const   indicator = document.querySelector('.scroll-indicator'),
         main = document.querySelector("main"),
-        options = {/**
-        * l'option root permet de changer le scrolling observé.
-        *  par défaut c'est celui du document, mais si on a ajouté un scrolling sur
-        *  un élément html, on pourrait faire nos observation par rapport à celui ci
-        */
-       // root: main
-       /**
-        * rootMargin permet d'étendre ou réduire la zone de détection.
-        * avec un nombre positif, la détection sera hors de l'écran.
-        * avec un nombre négatif, elle se fera dans une zone réduite de l'écran.
-        * Que ce soit pour l'entré ou la sortie de l'élément.
-        */
-       // rootMargin: "200px"
-       /**
-        * threshold indique via un chiffre entre 0 et 1, combien de pourcentage
-        * de l'élément doit être visible pour lancer l'évènement.
-        */
-       // threshold: 0.15
+        options = {
+            /**
+            * l'option root permet de changer le scrolling observé.
+            *  par défaut c'est celui du document, mais si on a ajouté un scrolling sur
+            *  un élément html, on pourrait faire nos observation par rapport à celui ci
+            */
+        // root: main
+        /**
+            * rootMargin permet d'étendre ou réduire la zone de détection.
+            * avec un nombre positif, la détection sera hors de l'écran.
+            * avec un nombre négatif, elle se fera dans une zone réduite de l'écran.
+            * Que ce soit pour l'entré ou la sortie de l'élément.
+            */
+        // rootMargin: "200px"
+        /**
+            * threshold indique via un chiffre entre 0 et 1, combien de pourcentage
+            * de l'élément doit être visible pour lancer l'évènement.
+            */
+        // threshold: 0.15
    },
         observer = new IntersectionObserver(setIndicator, options);
 /* 
@@ -91,3 +92,17 @@ function indicatorAnimation()
         indicator.style.transform = `scaleX(0)`;
     }
 }
+/**
+    On peut arrêter l'obersation d'un élément avec :
+    variableObserver.unobserve(élément observé);
+    ici ça donnerait :
+    observer.unobserve(main);
+    
+    On peut arrêter toute observation de notre observer avec:
+    variableObserver.disconnect()
+    ici:
+    observer.disconnect();
+    
+    Chaque observer étant lié à une fonction, si on veut lancer des observations
+    au fonctionnement totalement différent, il vaudra mieux créer un nouvel observer.
+ */

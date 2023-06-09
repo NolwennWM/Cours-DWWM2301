@@ -1,0 +1,5 @@
+# Ce fichier nous évitera d'envoyer nos tests d'upload sur git
+*.jpg
+*.gif
+*.png
+*.pdf

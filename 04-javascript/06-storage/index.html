@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Storage JS page 1</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="./script.js" defer></script>
+    <script src="./exercice/script.js" defer></script>
+</head>
+<body>
+    <!-- (header>(h1>{Jouons avec les thèmes})+(a[href="page2.html"]>{Page 2})+label[for="darkTheme"].switch>input[type="checkbox"]#darkTheme+span.slider.round)+main>p>lorem -->
+    <header>
+        <h1>
+            Jouons avec les thèmes
+        </h1>
+        <a href="page2.html">
+            Page 2
+        </a>
+        <label for="darkTheme" class="switch">
+            <input type="checkbox" id="darkTheme">
+            <span class="slider round"></span>
+        </label>
+        <!-- exercice : -->
+        <section>
+            <label for="theme">
+                Choisir un thème
+            </label>
+            <select name="theme" id="theme">
+                <option value="rouge">Rouge</option>
+                <option value="vert">Vert</option>
+                <option value="rose">Rose</option>
+            </select>
+        </section>
+        <button id="button-id" type="button">Couleur aléatoire</button>
+        <!-- fin exercice -->
+    </header>
+    <main>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas quis unde laborum neque illum aliquam velit, necessitatibus nostrum perspiciatis itaque expedita ipsa. Dolore explicabo harum sunt inventore dolor quo mollitia.
+        </p>
+    </main>
+</body>
+</html>

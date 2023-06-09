@@ -1,0 +1,33 @@
+*, ::before, ::after
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.feu
+{
+    display: block;
+}
+.couleur > div
+{
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    border-radius: 100%;
+    left: 300px;
+}
+.feurouge
+{
+    background-color: red;
+    top: 60px;
+}
+.feuorange
+{
+    background-color: orange;
+    top: 300px;
+}
+.feuvert
+{
+    background-color: green;
+    top: 540px;
+}

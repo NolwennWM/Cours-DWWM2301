@@ -18,9 +18,11 @@ main p
     line-height: 1.4;
     opacity: 0;
     transition: opacity .3s linear, transform .5s ease-out;
+    /* Exemple cours : */
+    /*display: inline-block;
+    width: 30%; */
+    /* Exercice : */
     transform: translateX(-50%);
-    display: inline-block;
-    width: 30%;
 }
 main p:nth-child(even)
 {
@@ -48,4 +50,8 @@ footer p
     font-size: 80px;
     text-align: center;
     background-color: chartreuse;
+}
+.visible
+{
+    opacity: 1;
 }
