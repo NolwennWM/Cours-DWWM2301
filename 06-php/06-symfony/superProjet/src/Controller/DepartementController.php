@@ -10,6 +10,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\Security\Http\Attribute\IsGranted;
 
 #[Route('/departement')]
 class DepartementController extends AbstractController
@@ -22,7 +23,10 @@ class DepartementController extends AbstractController
         ]);
     }
 
-    #[Route('/new', name: 'app_departement_new', methods: ['GET', 'POST'])]
+    #[
+        Route('/new', name: 'app_departement_new', methods: ['GET', 'POST']),
+        IsGranted("ROLE_ADMIN")
+    ]
     public function new(Request $request, EntityManagerInterface $entityManager): Response
     {
         $departement = new Departement();

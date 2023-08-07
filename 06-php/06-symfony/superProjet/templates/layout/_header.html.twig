@@ -6,4 +6,30 @@
             Cours Symfony
         {% endif %}
     </h1>
+    {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+        <h4>
+            Bienvenue 
+            {% if is_granted("ROLE_ADMIN") %}
+                Administrateur 
+            {% endif %}
+            {{ app.user.email }}
+        </h4>
+    {% endif %}
+    <nav class="navbar navbar-expand">
+        <ul class="navbar-nav">
+            {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+                <li class="nav-item">
+                    <a href="{{path("app_logout")}}" class="nav-link">Déconnexion</a>
+                </li>
+            {% else %}
+                <li class="nav-item">
+                    <a href="{{path("app_login")}}" class="nav-link">Connexion</a>
+                </li>
+                <li class="nav-item">
+                    <a href="{{path("app_register")}}" class="nav-link">Inscription</a>
+                </li>
+            {% endif %}
+            
+        </ul>
+    </nav>
 </header>
