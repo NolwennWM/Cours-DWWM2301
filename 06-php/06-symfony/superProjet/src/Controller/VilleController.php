@@ -5,6 +5,7 @@ namespace App\Controller;
 use App\Entity\Ville;
 use App\Form\VilleType;
 use App\Repository\VilleRepository;
+use App\Service\Mailer;
 use App\Service\Uploader;
 use Doctrine\Persistence\ManagerRegistry;
 use Symfony\Component\HttpFoundation\Request;
@@ -18,7 +19,7 @@ class VilleController extends AbstractController
     public function __construct(private Uploader $uploader){}
 
     #[Route('/add', name: 'add_ville')]
-    public function create(ManagerRegistry $doc, Request $request): Response
+    public function create(ManagerRegistry $doc, Request $request, Mailer $mailer): Response
     {
         /* 
             $em = $doc->getManager();
@@ -56,6 +57,7 @@ class VilleController extends AbstractController
             $em->persist($ville);
             $em->flush();
 
+            $mailer->sendMail();
             $this->addFlash("success", "Une nouvelle ville a bien été ajouté");
             return $this->redirectToRoute("readVille");
         }
