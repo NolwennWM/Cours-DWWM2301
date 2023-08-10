@@ -1,6 +1,6 @@
 <?php 
     // Quelles sont les adresses qui peuvent envoyer des requêtes à notre serveur. (http://www.supersite.fr)
-    header("Access-Control-Allow-Origin: *");
+    header("Access-Control-Allow-Origin: http://spa.localhost");
     // On indique le format des données échangés.
     header("Content-Type: application/json; charset=UTF-8");
     // Durée de vie de la requête (facultatif)

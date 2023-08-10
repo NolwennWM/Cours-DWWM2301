@@ -22,8 +22,12 @@ export default async function router(uri)
     const data = await response.text();
     main.innerHTML = data;
 
-    // TODO: gérer les imports JS
-
+    if(routes[path]?.js)
+    {
+        const script = await import("./"+routes[path].js);
+        await script.default(routes[path].option??undefined);
+    }
+    
     getLinks();
     main.classList.add("show");
 }
